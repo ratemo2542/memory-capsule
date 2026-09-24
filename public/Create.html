@@ -6,52 +6,52 @@
 
     <title>Create Memory Capsule</title>
 
-    <link rel="stylesheet" href="minimal.css">
+    <link rel="stylesheet" href="crafted.css">
 </head>
 
 <body>
 
-    <main class="hero">
-
-        <div class="capsule">
-
-            <h1>Create Your Memory</h1>
-
-            <p>
-                Let's turn a special moment into something
-                they can experience again.
-            </p>
+    <div class="page">
+        <header class="site-header">
+            <a class="brand" href="index.html"><span class="brand-mark"></span>Memory Capsule</a>
+            <span class="site-note">Stored only in this browser.</span>
+        </header>
+        <main class="stage">
+        <section class="panel form-panel">
+            <p class="kicker">New capsule</p>
+            <h1>Leave a note worth returning to.</h1>
+            <p class="description">A few details are all you need.</p>
 
             <form id="memoryForm" novalidate>
 
-                <input
-                    type="text"
-                    id="recipient"
-                    placeholder="Who is this for?"
-                    required
-                >
-                <p class="field-error" id="recipientError" aria-live="polite"></p>
+                <div class="field">
+                    <label for="recipient">For</label>
+                    <input type="text" id="recipient" placeholder="Who is this for?" required>
+                    <p class="field-error" id="recipientError" aria-live="polite"></p>
+                </div>
 
-                <select id="occasion" required>
-                    <option value="">Choose an occasion</option>
-                    <option value="Birthday">Birthday</option>
-                    <option value="Mothers Day">Mother's Day</option>
-                    <option value="Fathers Day">Father's Day</option>
-                    <option value="Anniversary">Anniversary</option>
-                    <option value="Just Because">Just Because</option>
-                </select>
-                <p class="field-error" id="occasionError" aria-live="polite"></p>
+                <div class="field">
+                    <label for="occasion">Occasion</label>
+                    <select id="occasion" required>
+                        <option value="">Choose an occasion</option>
+                        <option value="Birthday">Birthday</option>
+                        <option value="Mothers Day">Mother's Day</option>
+                        <option value="Fathers Day">Father's Day</option>
+                        <option value="Anniversary">Anniversary</option>
+                        <option value="Just Because">Just Because</option>
+                    </select>
+                    <p class="field-error" id="occasionError" aria-live="polite"></p>
+                </div>
 
-                <textarea
-                    id="message"
-                    placeholder="Write your personal message..."
-                    rows="5"
-                    required
-                ></textarea>
-                <p class="field-error" id="messageError" aria-live="polite"></p>
+                <div class="field">
+                    <label for="message">Your note</label>
+                    <textarea id="message" placeholder="Write your personal message..." rows="5" required></textarea>
+                    <p class="field-error" id="messageError" aria-live="polite"></p>
+                </div>
 
                 <label class="upload">
-                    📸 Add your memories
+                    Add photographs
+                    <span>Optional — choose up to six images.</span>
 
                     <input
                         type="file"
@@ -65,14 +65,14 @@
                 <p class="field-error" id="formError" aria-live="polite"></p>
 
                 <button type="submit">
-                    <span class="button-label">Create Capsule 🚀</span>
+                    <span class="button-label">Save capsule</span>
                 </button>
 
             </form>
 
-        </div>
-
-    </main>
+        </section>
+        </main>
+    </div>
 
     <script src="create.js"></script>
 

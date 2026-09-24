@@ -59,7 +59,7 @@ memoryForm.addEventListener("submit", async (event) => {
   } catch (error) {
     setError("formError", "Your photos could not be saved. Try smaller images or fewer photos.");
     submitButton.disabled = false;
-    submitButton.querySelector(".button-label").textContent = "Create Capsule 🚀";
+    submitButton.querySelector(".button-label").textContent = "Save capsule";
   }
 });
 

@@ -4,13 +4,17 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Your Memory Capsule</title>
-  <link rel="stylesheet" href="minimal.css">
+  <link rel="stylesheet" href="crafted.css">
 </head>
 <body>
-  <main class="hero">
-    <section class="capsule capsule--memory" id="capsuleContent" hidden>
-      <div class="capsule-icon" aria-hidden="true">🚀</div>
-      <p class="eyebrow" id="occasionName"></p>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark"></span>Memory Capsule</a>
+      <span class="site-note">Stored only in this browser.</span>
+    </header>
+    <main class="stage">
+    <section class="panel memory-panel" id="capsuleContent" hidden>
+      <p class="kicker" id="occasionName"></p>
       <h1>For <span id="recipientName"></span></h1>
       <p class="memory-message" id="memoryMessage"></p>
       <div class="photo-gallery" id="photoGallery"></div>
@@ -19,13 +23,14 @@
         <button type="button" class="button-secondary" id="clearCapsule">Clear this capsule</button>
       </div>
     </section>
-    <section class="capsule" id="emptyState" hidden>
-      <div class="capsule-icon" aria-hidden="true">✨</div>
-      <h1>No capsule yet</h1>
-      <p>Create one to see your message and photos here.</p>
+    <section class="panel intro" id="emptyState" hidden>
+      <p class="kicker">Nothing here yet</p>
+      <h1>Start with a small memory.</h1>
+      <p class="description">Your note and photographs will stay in this browser until you choose to clear them.</p>
       <button type="button" data-create-another>Create a Memory</button>
     </section>
-  </main>
+    </main>
+  </div>
   <script src="capsule.js"></script>
 </body>
 </html>
