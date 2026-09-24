@@ -1,11 +1,12 @@
 {
   "name": "memory-capsule",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Create and share personal memory capsules.",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "test": "node --check server.js && node --check public/script.js && node --check public/create.js && node --check public/capsule.js"
   },
   "keywords": [],
   "author": "",

@@ -6,7 +6,7 @@
 
     <title>Create Memory Capsule</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="minimal.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                 they can experience again.
             </p>
 
-            <form id="memoryForm">
+            <form id="memoryForm" novalidate>
 
                 <input
                     type="text"
@@ -30,6 +30,7 @@
                     placeholder="Who is this for?"
                     required
                 >
+                <p class="field-error" id="recipientError" aria-live="polite"></p>
 
                 <select id="occasion" required>
                     <option value="">Choose an occasion</option>
@@ -39,6 +40,7 @@
                     <option value="Anniversary">Anniversary</option>
                     <option value="Just Because">Just Because</option>
                 </select>
+                <p class="field-error" id="occasionError" aria-live="polite"></p>
 
                 <textarea
                     id="message"
@@ -46,6 +48,7 @@
                     rows="5"
                     required
                 ></textarea>
+                <p class="field-error" id="messageError" aria-live="polite"></p>
 
                 <label class="upload">
                     📸 Add your memories
@@ -57,9 +60,12 @@
                         multiple
                     >
                 </label>
+                <p class="file-note" id="photoNote">Up to 6 images. They stay only in this browser.</p>
+
+                <p class="field-error" id="formError" aria-live="polite"></p>
 
                 <button type="submit">
-                    Create Capsule 🚀
+                    <span class="button-label">Create Capsule 🚀</span>
                 </button>
 
             </form>
